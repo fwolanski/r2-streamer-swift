@@ -38,6 +38,8 @@ public class PublicationServer: ResourcesServer {
     
     // Mapping between endpoint and the matching container.
     public private(set) var containers: [String: Container] = [:]
+    
+    public static private(set) var fontResources: [FontResource] = []
 
     /// The port is initially set to 0 to choose a random port when first starting the server.
     /// Only the first time the server is started a random port is chosen, to make sure we keep the same port when coming out of background.
@@ -250,6 +252,15 @@ public class PublicationServer: ResourcesServer {
         
         publications.removeAll()
         containers.removeAll()
+    }
+    
+    public func addFontResource(_ fontResource: FontResource) throws -> Void
+    {
+        for (url, path) in fontResource.servedPaths {
+            try serve(url, at: path)
+        }
+        
+        Self.fontResources.append(fontResource)
     }
     
     

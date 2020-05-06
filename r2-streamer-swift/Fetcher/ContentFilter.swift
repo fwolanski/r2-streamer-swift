@@ -146,8 +146,13 @@ final internal class ContentFiltersEpub: ContentFilters {
             log(.error, "Invalid HTML resource: missing </head>")
             return stream
         }
-        let fontStyle = getHtmlFontStyle(forResource: "\(baseUrl)fonts/OpenDyslexic-Regular.otf", fontFamily: "OpenDyslexic")
-        resourceHtml = resourceHtml.insert(string: fontStyle, at: headEnd)
+        
+//        let fontStyle = getHtmlFontStyle(forResource: "\(baseUrl)fonts/OpenDyslexic-Regular.otf", fontFamily: "OpenDyslexic")
+//        resourceHtml = resourceHtml.insert(string: fontStyle, at: headEnd)
+        
+        for fontResource in PublicationServer.fontResources {
+            resourceHtml = resourceHtml.insert(string: fontResource.styleTag, at: headEnd)
+        }
 
         let enhancedData = resourceHtml.data(using: String.Encoding.utf8)
         let enhancedStream = DataInputStream(data: enhancedData!)

@@ -66,6 +66,7 @@
 		CAC5AEDA22C22A6F007DB8A8 /* HTTPContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5AED922C22A6F007DB8A8 /* HTTPContainer.swift */; };
 		CAC5AEE122C236FB007DB8A8 /* WEBPUBParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAC5AEE022C236FB007DB8A8 /* WEBPUBParser.swift */; };
 		CAF58199229EC8B3009A04E8 /* EPUBMetadataParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAF58198229EC8B3009A04E8 /* EPUBMetadataParserTests.swift */; };
+		F755949B473EDA93D767CF03 /* FontResource.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7559D1542F0D4615AAF1CA6 /* FontResource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -141,6 +142,7 @@
 		CAC5AED922C22A6F007DB8A8 /* HTTPContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPContainer.swift; sourceTree = "<group>"; };
 		CAC5AEE022C236FB007DB8A8 /* WEBPUBParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WEBPUBParser.swift; sourceTree = "<group>"; };
 		CAF58198229EC8B3009A04E8 /* EPUBMetadataParserTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EPUBMetadataParserTests.swift; sourceTree = "<group>"; };
+		F7559D1542F0D4615AAF1CA6 /* FontResource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontResource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -246,6 +248,7 @@
 			children = (
 				CA130D22229D4245000A627C /* PublicationServer.swift */,
 				CA130D23229D4245000A627C /* WebServerResourceResponse.swift */,
+				F7559D1542F0D4615AAF1CA6 /* FontResource.swift */,
 			);
 			path = Server;
 			sourceTree = "<group>";
@@ -558,6 +561,7 @@
 				CA130D57229D4245000A627C /* FontDecoder.swift in Sources */,
 				CA130D67229D4245000A627C /* SMILParser.swift in Sources */,
 				CA130D72229D4245000A627C /* DirectoryContainer.swift in Sources */,
+				F755949B473EDA93D767CF03 /* FontResource.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
